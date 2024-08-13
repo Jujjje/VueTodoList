@@ -8,6 +8,7 @@ interface IProps {
 }
 const store = useFolderStore();
 const { deleteFolder } = store;
+// @ts-ignore
 const props = defineProps<IProps>();
 
 const defaultStyle =

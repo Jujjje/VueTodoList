@@ -6,6 +6,7 @@ interface IProps {
   task: ITask;
   i: number;
 }
+// @ts-ignore
 const props = defineProps<IProps>();
 
 const store = useTasksStore();
