@@ -20,6 +20,10 @@ export const useTasksStore = defineStore("tasks", () => {
     tasks.value.push(newTask);
   }
 
+  function deleteTask(id: number) {
+    tasks.value.splice(id, 1);
+  }
+
   watch(
     () => tasks,
     (state) => {
@@ -27,5 +31,5 @@ export const useTasksStore = defineStore("tasks", () => {
     },
     { deep: true }
   );
-  return { tasks, changeDoneStatus, addTask };
+  return { tasks, changeDoneStatus, addTask, deleteTask };
 });
